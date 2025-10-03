@@ -3,6 +3,7 @@ body
     background-color: rgb(225, 178, 185);
     
  font-family: "Bitcount Prop Single Ink", system-ui;
+
  font-weight: 700;
 }
 
@@ -10,12 +11,12 @@ body
 .game-area,.welcome
 {
     background-color: rgb(227, 198, 203);
-    background-color: ;
+
     border: black 1px solid;
     border-radius: 5%;
-    width: 37%;
+color:black;
  height: 380px;
-
+    width: 37%;
 }
 .welcome
 {
@@ -55,14 +56,42 @@ body
     margin-top: 50px;
 }
 
-@media (max-width:300px) {
-    .game-area{
-        width: 100%;
-        
+
+
+@media (max-width:900px) {
+    .game-area,.welcome{
+        width: 70%;
+    }
+    .score-head{
+        font-size: 1rem;
+    }
+}
+@media (max-width:500px) {
+    .game-area,.welcome{
+        width: 80%;
+        height:90%;
     }
     .dspl img
     {
-        width:10%;
+        width:80px;
+    }
+    .score-head{
+        font-size: 1rem;
+    }
+   .btn
+    {
+        padding: 3px;
+        margin: 0px;
+    }
+}
+@media (max-width:300px) {
+    .game-area,.welcome {
+        width: 95%;
+     
+    }
+    .dspl img
+    {
+        width:80px;
        
     }
     .ds-plyr
@@ -80,30 +109,5 @@ body
     .game
     {
         padding:0;
-    }
-}
-@media (max-width:500px) {
-    .game-area{
-        width: 100%;
-    }
-    .dspl img
-    {
-        width:65px;
-    }
-    .score-head{
-        font-size: 1rem;
-    }
-   .btn
-    {
-        padding: 3px;
-        margin: 0px;
-    }
-}
-@media (max-width:900px) {
-    .game-area{
-        width: 60%;
-    }
-    .score-head{
-        font-size: 1rem;
     }
 }
