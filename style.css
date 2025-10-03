@@ -1,0 +1,109 @@
+body
+{
+    background-color: rgb(225, 178, 185);
+    
+ font-family: "Bitcount Prop Single Ink", system-ui;
+ font-weight: 700;
+}
+
+
+.game-area,.welcome
+{
+    background-color: rgb(227, 198, 203);
+    background-color: ;
+    border: black 1px solid;
+    border-radius: 5%;
+    width: 37%;
+ height: 380px;
+
+}
+.welcome
+{
+    padding:5%;
+}
+.pink
+{
+    background-color: rgb(225, 178, 185);
+}
+.green
+{
+    background-color: green;
+    color: white;
+}
+.red
+{
+    background-color: red;
+    color: white;
+}
+.game-area
+{
+    display: none;
+}
+
+.score-plyr,.score-comp
+{
+    display: block;
+    margin-top: 0px;
+}
+.dspl img
+{
+    width:100px;
+    height: 100px;
+}
+.game,.rst
+{
+    margin-top: 50px;
+}
+
+@media (max-width:300px) {
+    .game-area{
+        width: 100%;
+        
+    }
+    .dspl img
+    {
+        width:10%;
+       
+    }
+    .ds-plyr
+    {
+        padding:0;
+    }
+    .score-head{
+        font-size: 1rem;
+    }
+    .btn
+    {
+        padding: 0;
+        margin: 0;
+    }
+    .game
+    {
+        padding:0;
+    }
+}
+@media (max-width:500px) {
+    .game-area{
+        width: 100%;
+    }
+    .dspl img
+    {
+        width:65px;
+    }
+    .score-head{
+        font-size: 1rem;
+    }
+   .btn
+    {
+        padding: 3px;
+        margin: 0px;
+    }
+}
+@media (max-width:900px) {
+    .game-area{
+        width: 60%;
+    }
+    .score-head{
+        font-size: 1rem;
+    }
+}
