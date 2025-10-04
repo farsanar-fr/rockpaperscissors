@@ -12,9 +12,14 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+    <div class="overlay"></div>
     <div>
         <h1 class="text-center">Rock Paper Scissors</h1>
-        <h2 class="msg w-50 container text-center"></h2>
+        <div class="msg container hidden">
+            <h1 class="text-center"></h1>
+            <button class="btn pink rst">Reset</button>
+        </div>
+        
         <div class="welcome container">
             
                 <div class="input col-auto">
@@ -27,7 +32,7 @@
             
         </div>
         
-        <div class="game-area container text-center">
+        <div class="game-area hidden container text-center">
             
             <div class="row ">
                 <h3 class="col score-head">Player <span class="score-plyr">0</span></h3><h3 class="col score-head">Computer <span class="score-comp">0</span></h3>

@@ -18,7 +18,7 @@ $('.submit').click(function()
     else
     {
         $('.welcome').hide();
-        $('.game-area').show();
+        $('.game-area').removeClass("hidden");
         
     }
     
@@ -73,21 +73,38 @@ function calcScore()
         compScore++;
         $(".score-comp").text(compScore)
     }
-
+    console.log("PLYR"+plyrScore);
+    console.log("COMP"+compScore);
+    
     if(maxScore==compScore)
     {
-        $(".msg").addClass("red");
-        $(".msg").text("Computer Won");
+        console.log("COMPWON");
+        setTimeout(()=>
+        {
+            
+            $(".msg").addClass("red");
+        $(".msg h1").text("Computer Won");
+        $('.msg').removeClass("hidden");
+        $('.overlay').show();
         
         gameStop=true;
+        },500)
+        
+        
     }
     else if(maxScore==plyrScore)
     {
-        $(".msg").addClass("green");
-        $(".msg").text("Player Won");
+        console.log("PLYR won");
         
+        setTimeout(()=>
+        {
+        $(".msg").addClass("green");
+        $(".msg h1").text("Player Won");
+        $('.msg').removeClass("hidden");
+        $('.overlay').show();
         gameStop=true;
         triggerConfetti();
+        },500)
     }
     
   
@@ -101,7 +118,8 @@ $(".rst").click(
  compScore=0;
  gameStop=false;
   $('.welcome').show();
-$('.game-area').hide();
+$('.game-area').addClass("hidden");
+$('.overlay').hide();
 if($(".msg").hasClass("red"))
 {
     $(".msg").removeClass("red")
@@ -114,7 +132,8 @@ else if($(".msg").hasClass("green"))
  $(".ds-comp img").attr("src","./images/default.jpeg");
  $(".score-plyr").text(0);
  $(".score-comp").text(0);
- $(".msg").text("");
+ $('.msg').addClass("hidden");
+
     }
 )
 function triggerConfetti() {
